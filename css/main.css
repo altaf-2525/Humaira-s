@@ -1,0 +1,256 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+header {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  margin: 4em;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 4.1em;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+main {
+  display: flex;
+  gap: 8rem;
+  margin-top: 0;
+}
+
+.left-col {
+  width: 45%;
+}
+
+.right-col {
+  flex-grow: 1;
+}
+
+h1 {
+  font-size: 5.2rem;
+  font-family: "Playfair Display";
+  font-weight: normal;
+  margin: 0;
+}
+
+.subhead {
+  font-size: 1.8rem;
+}
+
+.cta-btns {
+  margin: 5em 0;
+  display: flex;
+  justify-content: space-between;
+}
+.cta-btns {
+  display: flex;
+  gap: 2em;
+}
+
+.primary-cta {
+  width: 50%;
+  background-color: #f2f0df;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  border-radius: 1.9em;
+  padding: 1em 2em;
+  align-items: center;
+  display: flex;
+}
+.secondary-cta {
+  width: 50%;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: black;
+  /* display: block; */
+  padding: 1em 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: -12em;
+  text-align: center;
+  position: relative;
+}
+.secondary-cta span {
+  flex-grow: 1;
+}
+
+.secondary-cta svg {
+  width: 10%;
+  transition: transform 0.3s ease;
+}
+
+.news {
+  display: flex;
+  gap: 3em;
+  padding: 5em;
+  border: 1px solid black;
+  border-radius: 0.8em;
+  position: relative;
+}
+
+.news:before {
+  position: absolute;
+  content: "";
+  background: url("../images/confetti.svg");
+  width: 100px;
+  height: 100px;
+  top: -20px;
+  left: -20px;
+  z-index: 2;
+}
+p.employees {
+  font-size: 3.3rem;
+  margin: 0;
+  font-weight: 200;
+  line-height: 100%;
+}
+p.details {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.right-col {
+  display: grid;
+  gap: 2.3em;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas:
+    "left ."
+    "left .";
+}
+.card {
+  border-radius: 0.8em;
+  padding: 1.1em;
+  display: flex;
+  align-items: end;
+  background-size: 150%;
+  transition: background-size 800ms;
+}
+
+.card1 {
+  grid-area: left;
+  background-image: url("../images/vita-demydiukova-P9z2bDOUC0E-unsplash.jpg");
+  position: relative;
+}
+.card1:before {
+  position: absolute;
+  content: "";
+  background: url(../images/tg.svg) no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 20px;
+  left: -30px;
+  pointer-events: none;
+}
+.card2 {
+  background-image: url("../images/raphael-lovaski-aeyH1loRFCY-unsplash.jpg");
+  background-position: center;
+}
+.card3 {
+  background-image: url("../images/omar-lopez-9w20MZ0lsK8-unsplash.jpg");
+  background-position: center;
+}
+
+.card-details {
+  display: flex;
+  background: white;
+  border-radius: 0.6em;
+  padding: 2em;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 800ms;
+}
+
+.card-details a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.card-details p {
+  font-size: 1.4rem;
+  margin: 0;
+}
+p.product-price {
+  font-size: 1.8rem;
+}
+
+nav ul li a:hover:before {
+  width: 35%;
+}
+
+.primary-cta:hover {
+  background: #e3e0c7;
+}
+.secondary-cta:hover svg {
+  transform: translateX(10px);
+}
+.secondary-cta:hover {
+  text-decoration: underline;
+}
+
+.card:hover {
+  background-size: 160%;
+}
+
+.card:hover .card-details {
+  transform: translateX(-20px);
+}
+
+.overly {
+  position: absolute;
+  z-index: 999;
+  background: white;
+  width: 100%;
+  height: 100%;
+  animation: reveal 1s ease-in forwards;
+  transform-origin: bottom;
+}
+
+/* @keyframes reveal {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+} */
+
+/* main {
+  animation: grownIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  transform: scale(0.4);
+}
+@keyframes growIn {
+  to {
+    transform: scale(1);
+  }
+} */
